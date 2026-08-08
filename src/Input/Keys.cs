@@ -653,6 +653,6 @@ namespace Microsoft.Xna.Framework.Input
 		/// <summary>
 		/// OEM Enlarge Window key.
 		/// </summary>
-		OemEnlW = 0xf4
+		OemEnlW = 0xf4,
 	}
 }

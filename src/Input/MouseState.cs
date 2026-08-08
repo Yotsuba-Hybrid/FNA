@@ -16,6 +16,8 @@ namespace Microsoft.Xna.Framework.Input
 	{
 		#region Public Properties
 
+		public Point Position =>  new Point(X, Y);
+
 		/// <summary>
 		/// Gets horizontal position of the cursor.
 		/// </summary>
@@ -83,6 +85,12 @@ namespace Microsoft.Xna.Framework.Input
 		/// Returns cumulative scroll wheel value since the game start.
 		/// </summary>
 		public int ScrollWheelValue
+		{
+			get;
+			internal set;
+		}
+
+		public int HorizontalScrollWheelValue
 		{
 			get;
 			internal set;

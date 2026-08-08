@@ -1232,6 +1232,22 @@ namespace Microsoft.Xna.Framework.Graphics
 		public void DrawIndexedPrimitives(
 			PrimitiveType primitiveType,
 			int baseVertex,
+			int startIndex,
+			int primitiveCount
+		) {
+			DrawIndexedPrimitives(
+				primitiveType,
+				baseVertex,
+				0,
+				vertexBufferBindings[0].VertexBuffer.VertexCount,
+				startIndex,
+				primitiveCount
+			);
+		}
+
+		public void DrawIndexedPrimitives(
+			PrimitiveType primitiveType,
+			int baseVertex,
 			int minVertexIndex,
 			int numVertices,
 			int startIndex,

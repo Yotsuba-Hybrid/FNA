@@ -187,6 +187,27 @@ namespace Microsoft.Xna.Framework.Content
 
 		#region Public Methods
 
+		public virtual T LoadLocalized<T>(string assetName)
+		{
+			string[] cultureNames =
+			{
+				System.Globalization.CultureInfo.CurrentCulture.Name,
+				System.Globalization.CultureInfo.CurrentCulture.TwoLetterISOLanguageName
+			};
+
+			foreach (string cultureName in cultureNames)
+			{
+				string localizedAssetName = assetName + "." + cultureName;
+				try
+				{
+					return Load<T>(localizedAssetName);
+				}
+				catch (ContentLoadException) { }
+			}
+
+			return Load<T>(assetName);
+		}
+
 		public virtual T Load<T>(string assetName)
 		{
 			if (string.IsNullOrEmpty(assetName))

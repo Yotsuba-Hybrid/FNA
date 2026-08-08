@@ -1,0 +1,11 @@
+/Users/memphis/Documents/YotsubaProject/Code/YotsubaHybrid/SandBoxGame/FNA-YTB/FNA/bin/DebugMG/net10.0/FNA.dll.config
+/Users/memphis/Documents/YotsubaProject/Code/YotsubaHybrid/SandBoxGame/FNA-YTB/FNA/bin/DebugMG/net10.0/FNA.deps.json
+/Users/memphis/Documents/YotsubaProject/Code/YotsubaHybrid/SandBoxGame/FNA-YTB/FNA/bin/DebugMG/net10.0/FNA.dll
+/Users/memphis/Documents/YotsubaProject/Code/YotsubaHybrid/SandBoxGame/FNA-YTB/FNA/bin/DebugMG/net10.0/FNA.pdb
+/Users/memphis/Documents/YotsubaProject/Code/YotsubaHybrid/SandBoxGame/FNA-YTB/FNA/objV3/DebugMG/net10.0/FNA.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/memphis/Documents/YotsubaProject/Code/YotsubaHybrid/SandBoxGame/FNA-YTB/FNA/objV3/DebugMG/net10.0/FNA.Core.csproj.CoreCompileInputs.cache
+/Users/memphis/Documents/YotsubaProject/Code/YotsubaHybrid/SandBoxGame/FNA-YTB/FNA/objV3/DebugMG/net10.0/FNA.Core.sourcelink.json
+/Users/memphis/Documents/YotsubaProject/Code/YotsubaHybrid/SandBoxGame/FNA-YTB/FNA/objV3/DebugMG/net10.0/FNA.dll
+/Users/memphis/Documents/YotsubaProject/Code/YotsubaHybrid/SandBoxGame/FNA-YTB/FNA/objV3/DebugMG/net10.0/refint/FNA.dll
+/Users/memphis/Documents/YotsubaProject/Code/YotsubaHybrid/SandBoxGame/FNA-YTB/FNA/objV3/DebugMG/net10.0/FNA.pdb
+/Users/memphis/Documents/YotsubaProject/Code/YotsubaHybrid/SandBoxGame/FNA-YTB/FNA/objV3/DebugMG/net10.0/ref/FNA.dll

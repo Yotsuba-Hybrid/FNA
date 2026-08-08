@@ -143,6 +143,11 @@ namespace Microsoft.Xna.Framework
 			OnClientSizeChanged();
 		}
 
+		internal void INTERNAL_FileDrop(string[] files)
+		{
+			OnFileDrop(new FileDropEventArgs(files));
+		}
+
 		internal void INTERNAL_ScreenDeviceNameChanged()
 		{
 			OnScreenDeviceNameChanged();

@@ -1476,6 +1476,11 @@ namespace Microsoft.Xna.Framework
 			return value1;
 		}
 
+		public System.Numerics.Vector4 ToNumerics()
+		{
+			return new System.Numerics.Vector4(this.X, this.Y, this.Z, this.W);
+		}
+
 		#endregion
 	}
 }

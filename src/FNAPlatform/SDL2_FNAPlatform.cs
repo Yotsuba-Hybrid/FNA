@@ -1273,6 +1273,11 @@ namespace Microsoft.Xna.Framework
 					game.RunApplication = false;
 					break;
 				}
+				else if (evt.type == SDL.SDL_EventType.SDL_DROPFILE)
+				{
+					string file = SDL.UTF8_ToManaged(evt.drop.file, true);
+					((FNAWindow)game.Window).INTERNAL_FileDrop(new string[] { file });
+				}
 			}
 		}
 

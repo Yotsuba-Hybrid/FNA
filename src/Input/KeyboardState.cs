@@ -20,6 +20,10 @@ namespace Microsoft.Xna.Framework.Input
 	{
 		#region Public Properties
 
+		public bool CapsLock => IsKeyDown(Keys.CapsLock);
+
+		public bool NumLock => IsKeyDown(Keys.NumLock);
+
 		/// <summary>
 		/// Returns the state of a specified key.
 		/// </summary>

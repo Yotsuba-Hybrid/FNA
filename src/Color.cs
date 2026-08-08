@@ -1033,6 +1033,12 @@ namespace Microsoft.Xna.Framework
 			private set;
 		}
 
+		public static Color MonoGameOrange
+		{
+			get;
+			private set;
+		}
+
 		/// <summary>
 		/// OrangeRed color (R:255,G:69,B:0,A:255).
 		/// </summary>
@@ -1523,6 +1529,7 @@ namespace Microsoft.Xna.Framework
 			Olive = new Color(0xff008080);
 			OliveDrab = new Color(0xff238e6b);
 			Orange = new Color(0xff00a5ff);
+			MonoGameOrange = new Color(230, 59, 0, 255);
 			OrangeRed = new Color(0xff0045ff);
 			Orchid = new Color(0xffd670da);
 			PaleGoldenrod = new Color(0xffaae8ee);

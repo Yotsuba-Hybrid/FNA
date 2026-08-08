@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/FAudio" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/FNA3D" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/FNA3D/MojoShader" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/SDL2-CS" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/SDL3-CS" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/Theorafile" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/lib/dav1dfile" vcs="Git" />
+  </component>
+</project>

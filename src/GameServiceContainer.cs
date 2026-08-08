@@ -54,6 +54,11 @@ namespace Microsoft.Xna.Framework
 			services.Add(type, provider);
 		}
 
+		public void AddService<T>(T provider)
+		{
+			AddService(typeof(T), provider);
+		}
+
 		public object GetService(Type type)
 		{
 			if (type == null)

@@ -276,8 +276,8 @@ namespace Microsoft.Xna.Framework.Graphics
 			SamplerState samplerState,
 			DepthStencilState depthStencilState,
 			RasterizerState rasterizerState,
-			Effect effect,
-			Matrix transformMatrix
+			Effect effect = null,
+			Matrix transformMatrix = new Matrix()
 		) {
 			if (beginCalled)
 			{

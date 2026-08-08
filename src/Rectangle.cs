@@ -200,10 +200,18 @@ namespace Microsoft.Xna.Framework
 		/// <param name="height">The height of the created <see cref="Rectangle"/>.</param>
 		public Rectangle(int x, int y, int width, int height)
 		{
-			X = x;
-			Y = y;
-			Width = width;
-			Height = height;
+			this.X = x;
+			this.Y = y;
+			this.Width = width;
+			this.Height = height;
+		}
+
+		public Rectangle(Point location, Point size)
+		{
+			this.X = location.X;
+			this.Y = location.Y;
+			this.Width = size.X;
+			this.Height = size.Y;
 		}
 
 		#endregion
@@ -230,6 +238,14 @@ namespace Microsoft.Xna.Framework
 		/// <param name="value">The coordinates to check for inclusion in this <see cref="Rectangle"/>.</param>
 		/// <returns><c>true</c> if the provided <see cref="Point"/> lies inside this <see cref="Rectangle"/>. <c>false</c> otherwise.</returns>
 		public bool Contains(Point value)
+		{
+			return (	(this.X <= value.X) &&
+					(value.X < (this.X + this.Width)) &&
+					(this.Y <= value.Y) &&
+					(value.Y < (this.Y + this.Height))	);
+		}
+
+		public bool Contains(Vector2 value)
 		{
 			return (	(this.X <= value.X) &&
 					(value.X < (this.X + this.Width)) &&

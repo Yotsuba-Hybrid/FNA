@@ -466,4 +466,7 @@
       <LogicalName>Microsoft.Xna.Framework.Graphics.Effect.Resources.YUVToRGBAEffectR.fxb</LogicalName>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="FNA.Core.csproj" />
+  </ItemGroup>
 </Project>

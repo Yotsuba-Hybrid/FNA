@@ -1263,6 +1263,16 @@ namespace Microsoft.Xna.Framework
 			return value1;
 		}
 
+		public Point ToPoint()
+		{
+			return new Point((int)this.X, (int)this.Y);
+		}
+
+		public System.Numerics.Vector2 ToNumerics()
+		{
+			return new System.Numerics.Vector2(this.X, this.Y);
+		}
+
 		#endregion
 	}
 }

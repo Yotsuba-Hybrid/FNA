@@ -14,13 +14,33 @@ using System.ComponentModel;
 
 namespace Microsoft.Xna.Framework
 {
+	public class FileDropEventArgs : EventArgs
+	{
+		public string[] Files { get; private set; }
+		public FileDropEventArgs(string[] files)
+		{
+			Files = files;
+		}
+	}
+
+	public class TextInputEventArgs : EventArgs
+	{
+		public char Character { get; }
+		public Input.Keys Key { get; }
+		public TextInputEventArgs(char character, Input.Keys key = Input.Keys.None)
+		{
+			Character = character;
+			Key = key;
+		}
+	}
+
 	public abstract class GameWindow
 	{
 		#region Public Properties
 
 		[DefaultValue(false)]
 		public abstract bool AllowUserResizing
-		{ 
+		{
 			get;
 			set;
 		}
@@ -84,6 +104,12 @@ namespace Microsoft.Xna.Framework
 			}
 		}
 
+		public virtual bool IsBorderless
+		{
+			get { return IsBorderlessEXT; }
+			set { IsBorderlessEXT = value; }
+		}
+
 		#endregion
 
 		#region Internal Variables
@@ -105,6 +131,8 @@ namespace Microsoft.Xna.Framework
 		public event EventHandler<EventArgs> ClientSizeChanged;
 		public event EventHandler<EventArgs> OrientationChanged;
 		public event EventHandler<EventArgs> ScreenDeviceNameChanged;
+		public event EventHandler<FileDropEventArgs> FileDrop;
+		public event EventHandler<TextInputEventArgs> TextInput;
 
 		#endregion
 
@@ -157,6 +185,22 @@ namespace Microsoft.Xna.Framework
 
 		protected void OnPaint()
 		{
+		}
+
+		protected void OnFileDrop(FileDropEventArgs e)
+		{
+			if (FileDrop != null)
+			{
+				FileDrop(this, e);
+			}
+		}
+
+		internal void OnTextInput(TextInputEventArgs e)
+		{
+			if (TextInput != null)
+			{
+				TextInput(this, e);
+			}
 		}
 
 		protected void OnScreenDeviceNameChanged()
