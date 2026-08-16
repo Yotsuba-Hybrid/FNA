@@ -8,7 +8,7 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "/Users/memphis/Documents/YotsubaProject/Code/YotsubaHybrid/Dependencies/FNA/FNA.Core.csproj",
-        "projectName": "FNA",
+        "projectName": "MonoGame.Framework",
         "projectPath": "/Users/memphis/Documents/YotsubaProject/Code/YotsubaHybrid/Dependencies/FNA/FNA.Core.csproj",
         "packagesPath": "/Users/memphis/.nuget/packages/",
         "outputPath": "/Users/memphis/Documents/YotsubaProject/Code/YotsubaHybrid/Dependencies/FNA/objV3/",

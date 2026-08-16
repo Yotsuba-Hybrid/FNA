@@ -23,10 +23,13 @@ namespace Microsoft.Xna.Framework
 		}
 	}
 
-	public class TextInputEventArgs : EventArgs
+	/* MonoGame exposes this as a value type with public fields. Matching that
+	 * layout is required for binary compatibility with MonoGame libraries.
+	 */
+	public struct TextInputEventArgs
 	{
-		public char Character { get; }
-		public Input.Keys Key { get; }
+		public char Character;
+		public Input.Keys Key;
 		public TextInputEventArgs(char character, Input.Keys key = Input.Keys.None)
 		{
 			Character = character;

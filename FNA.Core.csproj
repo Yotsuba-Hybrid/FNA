@@ -7,8 +7,9 @@
 	</PropertyGroup>
 	<PropertyGroup>
 		<EnableDefaultItems>false</EnableDefaultItems>
-		<AssemblyName>FNA</AssemblyName>
+		<AssemblyName>MonoGame.Framework</AssemblyName>
 		<RootNamespace>Microsoft.Xna.Framework</RootNamespace>
+        <AssemblyVersion>26.8.0.0</AssemblyVersion>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
 		<LangVersion>9</LangVersion>

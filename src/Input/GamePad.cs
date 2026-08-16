@@ -56,25 +56,55 @@ namespace Microsoft.Xna.Framework.Input
 
 		#region Public GamePad API
 
+		/* MonoGame-compatible API used by libraries that support more than the
+		 * original four PlayerIndex values. FNA already tracks the same count
+		 * internally through GAMEPAD_COUNT; expose it with MonoGame's public
+		 * member name and int-based overloads.
+		 */
+		public static int MaximumGamePadCount
+		{
+			get
+			{
+				return GAMEPAD_COUNT;
+			}
+		}
+
+		public static GamePadCapabilities GetCapabilities(int index)
+		{
+			if (index < 0 || index >= GAMEPAD_COUNT)
+			{
+				return new GamePadCapabilities();
+			}
+			return FNAPlatform.GetGamePadCapabilities(index);
+		}
+
 		public static GamePadCapabilities GetCapabilities(PlayerIndex playerIndex)
 		{
-			return FNAPlatform.GetGamePadCapabilities((int) playerIndex);
+			return GetCapabilities((int) playerIndex);
+		}
+
+		public static GamePadState GetState(int index)
+		{
+			return GetState(index, GamePadDeadZone.IndependentAxes);
 		}
 
 		public static GamePadState GetState(PlayerIndex playerIndex)
 		{
-			return FNAPlatform.GetGamePadState(
-				(int) playerIndex,
-				GamePadDeadZone.IndependentAxes
-			);
+			return GetState((int) playerIndex);
+		}
+
+		public static GamePadState GetState(int index, GamePadDeadZone deadZoneMode)
+		{
+			if (index < 0 || index >= GAMEPAD_COUNT)
+			{
+				return new GamePadState();
+			}
+			return FNAPlatform.GetGamePadState(index, deadZoneMode);
 		}
 
 		public static GamePadState GetState(PlayerIndex playerIndex, GamePadDeadZone deadZoneMode)
 		{
-			return FNAPlatform.GetGamePadState(
-				(int) playerIndex,
-				deadZoneMode
-			);
+			return GetState((int) playerIndex, deadZoneMode);
 		}
 
 		public static bool SetVibration(PlayerIndex playerIndex, float leftMotor, float rightMotor)
