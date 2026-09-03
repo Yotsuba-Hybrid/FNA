@@ -23,6 +23,10 @@ namespace Microsoft.Xna.Framework
 		{
 			get
 			{
+				if (!_initialized)
+				{
+					throw new InvalidOperationException("The GraphicsDevice property cannot be used before Initialize has been called.");
+				}
 				return this.Game.GraphicsDevice;
 			}
 		}
@@ -93,7 +97,7 @@ namespace Microsoft.Xna.Framework
 				_initialized = true;
 
 				IGraphicsDeviceService graphicsDeviceService = (IGraphicsDeviceService)
-					Game.Services.GetService(typeof(IGraphicsDeviceService));
+					Game.Services.INTERNAL_GetService(typeof(IGraphicsDeviceService));
 				if (graphicsDeviceService == null)
 				{
 					throw new InvalidOperationException("Drawable components require a graphics device service in the game service container.");

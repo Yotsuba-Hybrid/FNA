@@ -55,7 +55,7 @@ namespace Microsoft.Xna.Framework
 				if (graphicsDeviceService == null)
 				{
 					graphicsDeviceService = (IGraphicsDeviceService)
-						Services.GetService(typeof(IGraphicsDeviceService));
+						Services.INTERNAL_GetService(typeof(IGraphicsDeviceService));
 
 					if (graphicsDeviceService == null)
 					{
@@ -632,7 +632,7 @@ namespace Microsoft.Xna.Framework
 			 * (IService doesn't seem to matter anywhere else).
 			 */
 			graphicsDeviceService = (IGraphicsDeviceService)
-				Services.GetService(typeof(IGraphicsDeviceService));
+				Services.INTERNAL_GetService(typeof(IGraphicsDeviceService));
 			if (graphicsDeviceService != null)
 			{
 				graphicsDeviceService.DeviceDisposing += (o, e) => UnloadContent();
@@ -718,7 +718,7 @@ namespace Microsoft.Xna.Framework
 			if (exception is NoAudioHardwareException)
 			{
 				FNAPlatform.ShowRuntimeError(
-					Window.Title,
+					Window,
 					"Could not find a suitable audio device. " +
 					" Verify that a sound card is\ninstalled," +
 					" and check the driver properties to make" +
@@ -729,7 +729,7 @@ namespace Microsoft.Xna.Framework
 			if (exception is NoSuitableGraphicsDeviceException)
 			{
 				FNAPlatform.ShowRuntimeError(
-					Window.Title,
+					Window,
 					"Could not find a suitable graphics device." +
 					" More information:\n\n" + exception.Message
 				);
@@ -753,7 +753,7 @@ namespace Microsoft.Xna.Framework
 			 * before calling Run().
 			 */
 			graphicsDeviceManager = (IGraphicsDeviceManager)
-				Services.GetService(typeof(IGraphicsDeviceManager));
+				Services.INTERNAL_GetService(typeof(IGraphicsDeviceManager));
 			if (graphicsDeviceManager != null)
 			{
 				graphicsDeviceManager.CreateDevice();

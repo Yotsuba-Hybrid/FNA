@@ -221,6 +221,10 @@ namespace Microsoft.Xna.Framework
 		/// <param name="result">The containment type as an output parameter.</param>
 		public ContainmentType Contains(BoundingFrustum frustum)
 		{
+			if (ReferenceEquals(frustum, null))
+			{
+				throw new ArgumentNullException("frustum", "This method does not accept null for this parameter.");
+			}
 			// Check if all corners are in sphere.
 			bool inside = true;
 
@@ -348,7 +352,11 @@ namespace Microsoft.Xna.Framework
 		/// <returns>The new <see cref="BoundingSphere"/>.</returns>
 		public static BoundingSphere CreateFromFrustum(BoundingFrustum frustum)
 		{
-			return CreateFromPoints(frustum.GetCorners());
+			if (ReferenceEquals(frustum, null))
+			{
+				throw new ArgumentNullException("frustum");
+			}
+			return CreateFromPoints(frustum.corners);
 		}
 
 		/// <summary>
@@ -538,6 +546,10 @@ namespace Microsoft.Xna.Framework
 
 		public bool Intersects(BoundingFrustum frustum)
 		{
+			if (ReferenceEquals(frustum, null))
+			{
+				throw new ArgumentNullException("frustum", "This method does not accept null for this parameter.");
+			}
 			return frustum.Intersects(this);
 		}
 

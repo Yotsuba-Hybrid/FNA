@@ -141,8 +141,7 @@ namespace Microsoft.Xna.Framework
 
 		public void Normalize()
 		{
-			float length = Normal.Length();
-			float factor = 1.0f / length;
+			float factor = 1.0f / Normal.Length();
 			Vector3.Multiply(ref Normal, factor, out Normal);
 			D = D * factor;
 		}
@@ -169,7 +168,7 @@ namespace Microsoft.Xna.Framework
 
 		public PlaneIntersectionType Intersects(BoundingFrustum frustum)
 		{
-			if (frustum == null)
+			if (ReferenceEquals(frustum, null))
 			{
 				throw new ArgumentNullException("frustum", "This method does not accept null for this parameter.");
 			}
@@ -201,15 +200,13 @@ namespace Microsoft.Xna.Framework
 
 		public static Plane Normalize(Plane value)
 		{
-			Plane ret;
-			Normalize(ref value, out ret);
-			return ret;
+			value.Normalize();
+			return value;
 		}
 
 		public static void Normalize(ref Plane value, out Plane result)
 		{
-			float length = value.Normal.Length();
-			float factor = 1.0f / length;
+			float factor = 1.0f / value.Normal.Length();
 			Vector3.Multiply(ref value.Normal, factor, out result.Normal);
 			result.D = value.D * factor;
 		}
