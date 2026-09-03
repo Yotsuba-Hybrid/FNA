@@ -30,11 +30,15 @@ namespace Microsoft.Xna.Framework.Graphics
 			}
 			set
 			{
-				FNA3D.FNA3D_SetEffectTechnique(
-					GraphicsDevice.GLDevice,
-					glEffect,
-					value.TechniquePointer
-				);
+				if (!IsMGFXEffect)
+				{
+					FNA3D.FNA3D_SetEffectTechnique(
+						GraphicsDevice.GLDevice,
+						glEffect,
+						value.TechniquePointer
+					);
+				}
+
 				INTERNAL_currentTechnique = value;
 			}
 		}

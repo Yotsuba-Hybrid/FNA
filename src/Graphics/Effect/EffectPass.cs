@@ -9,19 +9,16 @@
 
 #region Using Statements
 using System;
+using System.Collections.Generic;
+using Microsoft.Xna.Framework.YotsubaFramework.Graphics.Effect.MGFX;
+
 #endregion
 
 namespace Microsoft.Xna.Framework.Graphics
 {
-	public sealed class EffectPass
+	public sealed partial class EffectPass
 	{
 		#region Public Properties
-
-		public string Name
-		{
-			get;
-			private set;
-		}
 
 		public EffectAnnotationCollection Annotations
 		{
@@ -39,7 +36,10 @@ namespace Microsoft.Xna.Framework.Graphics
 
 		#endregion
 
+
+
 		#region Internal Constructor
+
 
 		internal EffectPass(
 			string name,
@@ -56,11 +56,23 @@ namespace Microsoft.Xna.Framework.Graphics
 		}
 
 		#endregion
-
 		#region Public Methods
+
 
 		public void Apply()
 		{
+
+			if (IsMGFXPass)
+			{
+				parentEffect.OnApply();
+				parentEffect.INTERNAL_applyMGFXPass(
+					MGFXPass,
+					pass);
+
+				return;
+			}
+
+
 			if (parentTechnique != parentEffect.CurrentTechnique.TechniquePointer)
 			{
 				throw new InvalidOperationException(

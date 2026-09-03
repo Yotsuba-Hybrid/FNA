@@ -15,7 +15,7 @@ using System.Runtime.InteropServices;
 
 namespace Microsoft.Xna.Framework.Graphics
 {
-	public sealed class EffectParameter
+	public sealed partial class EffectParameter
 	{
 		#region Public Properties
 
