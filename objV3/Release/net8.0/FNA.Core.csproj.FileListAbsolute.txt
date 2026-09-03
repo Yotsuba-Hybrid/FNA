@@ -1,0 +1,11 @@
+/Users/memphis/Documents/YotsubaProject/Code/YotsubaHybrid/Dependencies/FNA/bin/Release/net8.0/MonoGame.Framework.dll.config
+/Users/memphis/Documents/YotsubaProject/Code/YotsubaHybrid/Dependencies/FNA/bin/Release/net8.0/MonoGame.Framework.deps.json
+/Users/memphis/Documents/YotsubaProject/Code/YotsubaHybrid/Dependencies/FNA/bin/Release/net8.0/MonoGame.Framework.dll
+/Users/memphis/Documents/YotsubaProject/Code/YotsubaHybrid/Dependencies/FNA/bin/Release/net8.0/MonoGame.Framework.pdb
+/Users/memphis/Documents/YotsubaProject/Code/YotsubaHybrid/Dependencies/FNA/objV3/Release/net8.0/FNA.Core.GeneratedMSBuildEditorConfig.editorconfig
+/Users/memphis/Documents/YotsubaProject/Code/YotsubaHybrid/Dependencies/FNA/objV3/Release/net8.0/FNA.Core.csproj.CoreCompileInputs.cache
+/Users/memphis/Documents/YotsubaProject/Code/YotsubaHybrid/Dependencies/FNA/objV3/Release/net8.0/FNA.Core.sourcelink.json
+/Users/memphis/Documents/YotsubaProject/Code/YotsubaHybrid/Dependencies/FNA/objV3/Release/net8.0/MonoGame.Framework.dll
+/Users/memphis/Documents/YotsubaProject/Code/YotsubaHybrid/Dependencies/FNA/objV3/Release/net8.0/refint/MonoGame.Framework.dll
+/Users/memphis/Documents/YotsubaProject/Code/YotsubaHybrid/Dependencies/FNA/objV3/Release/net8.0/MonoGame.Framework.pdb
+/Users/memphis/Documents/YotsubaProject/Code/YotsubaHybrid/Dependencies/FNA/objV3/Release/net8.0/ref/MonoGame.Framework.dll

@@ -1670,9 +1670,14 @@ namespace Microsoft.Xna.Framework
 
 		#endregion
 
-		#region Private Constructors
+		#region Packed Value Constructor
 
-		private Color(uint packedValue)
+		/// <summary>
+		/// Constructs a color from a packed RGBA value.
+		/// </summary>
+		/// <param name="packedValue">The packed RGBA value.</param>
+		[CLSCompliant(false)]
+		public Color(uint packedValue)
 		{
 			this.packedValue = packedValue;
 		}

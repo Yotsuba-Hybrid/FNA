@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "oUCoUOWiPIA=",
+  "success": true,
+  "projectFilePath": "/Users/memphis/Documents/YotsubaProject/Code/YotsubaHybrid/Dependencies/FNA/FNA.Core.csproj",
+  "expectedPackageFiles": [
+    "/Users/memphis/.nuget/packages/microsoft.netcore.app.ref/8.0.29/microsoft.netcore.app.ref.8.0.29.nupkg.sha512",
+    "/Users/memphis/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.29/microsoft.aspnetcore.app.ref.8.0.29.nupkg.sha512"
+  ],
+  "logs": []
+}

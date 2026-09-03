@@ -13,6 +13,24 @@ namespace Microsoft.Xna.Framework.Graphics
 	{
 		#region Public Properties
 
+		/// <summary>
+		/// Not Implemented
+		/// </summary>
+		public Color BorderColor { get; set; } = Color.White;
+
+		/// <summary>
+		/// Not Implemented
+		/// </summary>
+		public CompareFunction ComparisonFunction { get; set; } =
+			CompareFunction.Always;
+
+
+		/// <summary>
+		/// Not Implemented
+		/// </summary>
+		public TextureFilterMode FilterMode { get; set; } =
+			TextureFilterMode.Default;
+
 		public TextureAddressMode AddressU
 		{
 			get

@@ -11,12 +11,13 @@
 using System;
 using System.Threading;
 using System.Collections.Generic;
+using System.IO;
 using System.Runtime.InteropServices;
 #endregion
 
 namespace Microsoft.Xna.Framework.Graphics
 {
-	public class Effect : GraphicsResource
+	public partial class Effect : GraphicsResource
 	{
 		#region Public Properties
 
@@ -215,26 +216,8 @@ namespace Microsoft.Xna.Framework.Graphics
 		#region Public Constructor
 
 		public Effect(GraphicsDevice graphicsDevice, byte[] effectCode)
+			: this(graphicsDevice, effectCode, 0, effectCode.Length)
 		{
-			GraphicsDevice = graphicsDevice;
-
-			// Send the blob to the GLDevice to be parsed/compiled
-			IntPtr effectData;
-			FNA3D.FNA3D_CreateEffect(
-				graphicsDevice.GLDevice,
-				effectCode,
-				effectCode.Length,
-				out glEffect,
-				out effectData
-			);
-
-			this.effectData = effectData;
-
-			// This is where it gets ugly...
-			INTERNAL_parseEffectStruct(effectData);
-
-			// The default technique is the first technique.
-			CurrentTechnique = Techniques[0];
 		}
 
 		#endregion

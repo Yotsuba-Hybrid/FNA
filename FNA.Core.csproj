@@ -12,7 +12,6 @@
         <AssemblyVersion>26.8.0.0</AssemblyVersion>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
-		<LangVersion>9</LangVersion>
 	</PropertyGroup>
 	<PropertyGroup>
 		<FNASettingsPropsFilePath>$(SolutionDir)FNA.Settings.props</FNASettingsPropsFilePath>
@@ -176,6 +175,7 @@
 		<Compile Include="src\Graphics\Effect\IEffectLights.cs" />
 		<Compile Include="src\Graphics\Effect\IEffectMatrices.cs" />
 		<Compile Include="src\Graphics\Effect\Resources.cs" />
+		<Compile Include="src\Graphics\Effect\Shader.cs" />
 		<Compile Include="src\Graphics\Effect\StockEffects\AlphaTestEffect.cs" />
 		<Compile Include="src\Graphics\Effect\StockEffects\BasicEffect.cs" />
 		<Compile Include="src\Graphics\Effect\StockEffects\DualTextureEffect.cs" />
@@ -255,6 +255,7 @@
 		<Compile Include="src\Graphics\Texture3D.cs" />
 		<Compile Include="src\Graphics\TextureCollection.cs" />
 		<Compile Include="src\Graphics\TextureCube.cs" />
+		<Compile Include="src\Graphics\TextureFilterMode.cs" />
 		<Compile Include="src\Graphics\Vertices\BufferUsage.cs" />
 		<Compile Include="src\Graphics\Vertices\DynamicIndexBuffer.cs" />
 		<Compile Include="src\Graphics\Vertices\DynamicVertexBuffer.cs" />
@@ -366,6 +367,7 @@
 		<Compile Include="lib\FAudio\csharp\FAudio.cs" />
 		<Compile Include="lib\Theorafile\csharp\Theorafile.cs" />
 		<Compile Include="lib\dav1dfile\csharp\dav1dfile.Legacy.cs" />
+		<Compile Include="YotsubaFramework\**\*.cs" />
 	</ItemGroup>
 	<ItemGroup>
 		<None Include="app.config" />
